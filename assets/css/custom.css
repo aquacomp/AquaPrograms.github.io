@@ -1,1 +1,21 @@
-/* Write your custom CSS here */
+.btn.btn-ubuntu {
+    background: #E8552C;
+    color: #fff;
+}
+
+.btn.btn-ubuntu:hover  {
+    background: #F56239!important;
+}
+
+.btn.btn-ubuntu:focus,
+.btn.btn-ubuntu.active,
+.btn.btn-ubuntu:active {
+    background: #F56239!important;
+    box-shadow: 0 0 0 0.2rem rgba(232, 85, 44, 0.25);
+}
+
+.btn-ubuntu:not(:disabled):not(.disabled):active:focus,
+.btn-ubuntu:not(:disabled):not(.disabled).active:focus,
+.show > .btn-ubuntu.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(232, 85, 44, 0.5);
+}
