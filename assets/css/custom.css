@@ -1,3 +1,4 @@
+/* Кнопка Ubuntu */
 .btn.btn-ubuntu {
     background: #E8552C;
     color: #fff;
@@ -18,4 +19,27 @@
 .btn-ubuntu:not(:disabled):not(.disabled).active:focus,
 .show > .btn-ubuntu.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(232, 85, 44, 0.5);
+}
+
+/* Кнопка Manjaro*/
+.btn.btn-manjaro {
+    background: #39BF64;
+    color: #fff;
+}
+
+.btn.btn-manjaro:hover  {
+    background: #48CE73!important;
+}
+
+.btn.btn-manjaro:focus,
+.btn.btn-manjaro.active,
+.btn.btn-manjaro:active {
+    background: #48CE73!important;
+    box-shadow: 0 0 0 0.2rem rgba(57, 191, 100, 0.25);
+}
+
+.btn-manjaro:not(:disabled):not(.disabled):active:focus,
+.btn-manjaro:not(:disabled):not(.disabled).active:focus,
+.show > .btn-manjaro.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(57, 191, 100, 0.5);
 }
