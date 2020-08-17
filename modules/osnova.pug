@@ -1,0 +1,97 @@
+mixin spisok_osnova(text)
+  li.sidebar-title= text
+mixin spisok_element_active(href, icon, text)
+  li
+    a.active(href= href) <i class="material-icons">#{icon}</i>#{text}
+mixin spisok_element_disabled(href, icon, text)
+  li
+    a.disabled(href= href) <i class="material-icons">#{icon}</i>#{text}
+mixin spisok_element(href, icon, text)
+  li
+    a(href= href) <i class="material-icons">#{icon}</i>#{text}
+mixin spisok_element_vniz(icon, text, knopka)
+  li
+    a(href="") <i class="material-icons">#{icon}</i>#{text}<i class="material-icons has-sub-menu">keyboard_arrow_left</i>
+    ul.sub-menu
+      each knopka2 in knopka
+        li
+          a(href= knopka2.href)= knopka2.text
+block variables
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="Responsive Admin Dashboard Template")
+    meta(name="keywords" content="admin,dashboard")
+    meta(name="author" content="stacks")
+    title #{title}
+    block link
+      link(href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet")
+      link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+      link(href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet")
+      link(href="assets/plugins/font-awesome/css/all.min.css" rel="stylesheet")
+      link(href="assets/css/lime.min.css" rel="stylesheet")
+      link(href="assets/css/custom.css" rel="stylesheet")
+  body
+    div.lime-sidebar
+      div.lime-sidebar-inner.slimscroll
+        ul.accordion-menu
+          block menu
+    div.theme-settings-sidebar
+      div.theme-settings-inner
+        h3.theme-sidebar-title Темы
+        p.themes-info Выбрать тему
+        a.theme-item.active(href="#")
+          img(src="assets/images/themes/1.png" alt="")
+          h4.theme-title Светлая тема
+        a.theme-item(href="#")
+          div.coming-theme Скоро
+          img(src="assets/images/themes/2.png" alt="")
+          h4.theme-title Тёмная тема
+    div.lime-header
+      nav.navbar.navbar-expand-lg
+        section.material-design-hamburger.navigation-toggle
+          a.button-collapse.material-design-hamburger__icon(href="javascript:void(0)")
+            span.material-design-hamburger__layer
+        a.navbar-brand(href="#") AquaPrograms
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+          i.material-icons keyboard_arrow_down
+        div.collapse.navbar-collapse(id="navbarSupportedContent")
+          form.form-inline.my-2.my-lg-0.search
+            input.form-control.mr-sm-2(type="search" placeholder="Поиск" aria-label="Search")
+          ul.navbar-nav.ml-auto
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle.theme-settings-link(href="#")
+                i.material-icons layers
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                i.material-icons more_vert
+              ul.dropdown-menu.dropdown-menu-right
+                li
+                  a.dropdown-item(href="#") Аккаунт
+                li
+                  a.dropdown-item(href="#") Настройки
+                li.divider
+                li
+                  a.dropdown-item(href="#") Выйти
+    div.lime-container
+      div.lime-body
+        div.container
+          block content
+      block footer
+        div.lime-footer
+          div.container
+            div.row
+              div.col-md-12
+                span.footer-text 2020 © AquaC
+    block scripts
+      script(src="assets/plugins/jquery/jquery-3.1.0.min.js")
+      script(src="assets/plugins/bootstrap/popper.min.js")
+      script(src="assets/plugins/bootstrap/js/bootstrap.min.js")
+      script(src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js")
+      script(src="assets/plugins/chartjs/chart.min.js")
+      script(src="assets/plugins/apexcharts/dist/apexcharts.min.js")
+      script(src="assets/js/lime.min.js")
+      script(src="assets/js/pages/dashboard.js")
