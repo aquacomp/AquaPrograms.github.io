@@ -43,3 +43,26 @@
 .show > .btn-manjaro.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(57, 191, 100, 0.5);
 }
+
+/* Кнопка Trello */
+.btn.btn-trello {
+    background: #5397BF;
+    color: #fff;
+}
+
+.btn.btn-trello:hover  {
+    background: #6BA6C8!important;
+}
+
+.btn.btn-trello:focus,
+.btn.btn-trello.active,
+.btn.btn-trello:active {
+    background: #6BA6C8!important;
+    box-shadow: 0 0 0 0.2rem rgba(83, 151, 191, 0.25);
+}
+
+.btn-trello:not(:disabled):not(.disabled):active:focus,
+.btn-trello:not(:disabled):not(.disabled).active:focus,
+.show > .btn-trello.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(83, 151, 191, 0.5);
+}
